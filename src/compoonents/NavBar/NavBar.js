@@ -25,9 +25,9 @@ function NavBar() {
                         {/* <p className='DashBoardTitleSmall'>Realestate Dashboard</p> */}
                     </div>
                     <div className="CenterNavBar">
-                        <a href="">Home</a>
+                        {/* <a href="">Home</a>
                         <a href="">Dash</a>
-                        <a href="">News</a>
+                        <a href="">News</a> */}
                     </div>
                     <div className="RightSideNavBar">
                     </div>
