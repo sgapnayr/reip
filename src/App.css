@@ -51,7 +51,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 -7rem;
-  transform: scale(.3);
+  transform: scale(.25);
 }
 
 .DashBoardTitleSmall {
@@ -329,7 +329,7 @@ a:hover {
 }
 
 .InfoWrapper {
-  margin: 2rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
