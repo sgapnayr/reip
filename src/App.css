@@ -221,11 +221,12 @@ a:hover {
 
 .DataDiv:hover .InfoTile {
   margin: 1rem;
+  width: 50%;
   position: absolute;
   display: inline;
   color: white;
   background: transparent;
-  padding: 4rem;
+  padding: 3rem;
   backdrop-filter: blur(7px);
   border-radius: 10px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
@@ -329,7 +330,9 @@ a:hover {
 
 .InfoWrapper {
   margin: 2rem;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 button {
