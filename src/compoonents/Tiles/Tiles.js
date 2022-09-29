@@ -15,6 +15,32 @@ function Tiles() {
         <>
             <div className="DataContainers">
                 <div className="DataContainer FirstRow">
+                    <div className="FourByFour">
+                        <div className="LeftTwo">
+                            <div className="DataDiv">
+                                <div className="EconData">
+                                    Econ Data
+                                </div>
+                            </div>
+                            <div className="DataDiv">
+                                <div className="EconData">
+                                    Econ Data
+                                </div>
+                            </div>
+                        </div>
+                        <div className="RightTwo">
+                            <div className="DataDiv">
+                                <div className="EconData">
+                                    Econ Data
+                                </div>
+                            </div>
+                            <div className="DataDiv">
+                                <div className="EconData">
+                                    Econ Data
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="DataDiv LongRow">
                         <p>Market Trend</p>
                         <div className="Chart">

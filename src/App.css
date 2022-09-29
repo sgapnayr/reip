@@ -107,42 +107,43 @@ a:hover {
 }
 
 /* Carousel */
+.CarouselWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .Carousel {
   width: 100%;
   height: 5vh;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+  border-right: 1px solid rgba(0, 0, 0, .1);
+  border-left: 1px solid rgba(0, 0, 0, .1);
   display: flex;
   justify-content: center;
   align-items: center;
   font-style: italic;
   color: gray;
   background-color: var(--color4);
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, .75) inset;
 }
 
 @keyframes slidein {
   0% {
-    transform: translateX(-700%);
+    transform: translateY(-30%);
     opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  25% {
-    color: white;
-  }
-
   50% {
-    transform: translateX(0%);
+    transform: translateY(0%);
     opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   100% {
-    transform: translateX(700%);
+    transform: translateY(30%);
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -150,11 +151,44 @@ a:hover {
   }
 }
 
-.CarouselInfo {
+.CarouselInfo1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation-duration: 10s;
+  animation-duration: 8s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  color: white;
+}
+
+.CarouselInfo2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 8s;
+  animation-delay: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  color: white;
+}
+
+.CarouselInfo3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 8s;
+  animation-delay: 6s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  color: white;
+}
+
+.CarouselInfo4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 8s;
+  animation-delay: 9s;
   animation-name: slidein;
   animation-iteration-count: infinite;
   color: white;
@@ -182,7 +216,24 @@ a:hover {
 
 .FirstRow {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.FourByFour {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.LeftTwo {
+  display: flex;
+  flex-direction: column;
+}
+
+.RightTwo {
+  display: flex;
+  flex-direction: column;
 }
 
 .SecondRow {
@@ -234,7 +285,7 @@ a:hover {
 }
 
 .LongRow {
-  grid-column: 1 / 3;
+  grid-column: 2 / 4;
 }
 
 .LongRow2 {
@@ -250,6 +301,19 @@ a:hover {
 }
 
 /* Data */
+.EconData {
+  background-color: var(--color4);
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+  height: 80%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+}
+
 .Rates {
   background-color: green;
   border-radius: 10px;
@@ -407,7 +471,7 @@ button:hover {
   border-radius: 10px;
   padding: 1rem;
   backdrop-filter: blur(18px);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
   transform: translateY(-40%);
 }
 
