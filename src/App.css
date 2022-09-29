@@ -236,6 +236,17 @@ a:hover {
   flex-direction: column;
 }
 
+.TwoByThree {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.TopOfTwoByThree {
+  grid-column: 1 /3;
+}
+
 .SecondRow {
   display: flex;
   justify-content: center;

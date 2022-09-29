@@ -50,14 +50,35 @@ function Tiles() {
                             This is chart information.
                         </div>
                     </div>
-                    <div className="DataDiv">
-                        <div className="Rates">
-                            <div className="InfoWrapper">
-                                <p>Rates</p>
-                                <h1>7.1%</h1>
-                                <p className='PopUpInfo'>A mortgage rate is the rate of interest charged on a mortgage. Determined by the lender, mortgage rates vary for borrowers based on their credit profile.</p>
+                    <div className="TwoByThree">
+                        <div className="TopOfTwoByThree">
+                            <div className="DataDiv">
+                                <div className="Chart">
+                                    <ShowChart />
+                                </div>
                             </div>
                         </div>
+
+                        <div className="DataDiv">
+                            <div className="Rates">
+                                <div className="InfoWrapper">
+                                    <p>Rates</p>
+                                    <h1>7.1%</h1>
+                                    <p className='PopUpInfo'>A mortgage rate is the rate of interest charged on a mortgage. Determined by the lender, mortgage rates vary for borrowers based on their credit profile.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="DataDiv">?</div>
+                        <div className="DataDiv">
+                            <div className="CPI">
+                                <div className="InfoWrapper">
+                                    <p>CPI</p>
+                                    <h1>6.3%</h1>
+                                    <p className='PopUpInfo'>The Consumer Price Index (CPI) is a measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="DataDiv">?</div>
                     </div>
                 </div>
 
