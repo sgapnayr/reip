@@ -198,7 +198,6 @@ a:hover {
 .DataContainers {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 88vh;
 }
 
@@ -263,6 +262,21 @@ a:hover {
 }
 
 .DataDiv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+  color: white;
+  border: 1px solid var(--color4);
+  transition: .1s all ease-in-out;
+  cursor: pointer;
+  flex: 1
+}
+
+.DataDiv2 {
   width: 100%;
   height: 100%;
   display: flex;

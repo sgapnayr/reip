@@ -7,7 +7,7 @@ import EconomicData from '../EconomicData/EconomicData';
 function Button({ value }) {
     const [isActive, setIsActive] = useState(false)
     const handleActive = (e) => {
-        setIsActive(e.currentTarget.value)
+        setIsActive(!isActive)
     }
     return (
         <>
@@ -104,7 +104,7 @@ function Tiles() {
                 </div>
 
                 <div className="DataContainer ThirdRow">
-                    <div className="DataDiv LongRow2">
+                    <div className="DataDiv2 LongRow2">
                         <div className="CheckList">
                             <Button value={'Office'} />
                             <Button value={'Industrial'} />
