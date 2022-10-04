@@ -9,6 +9,7 @@ function App() {
       <NavBar />
       <TickerCarousel />
       <Tiles />
+      <div className="div"></div>
     </div>
   );
 }
