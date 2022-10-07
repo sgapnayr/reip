@@ -140,7 +140,7 @@ a:hover {
 
 .FontAwesomeIcon:active {
   color: var(--color4);
-  transform: scale(1.2);
+  transform: scale(.2);
 }
 
 .Clock {
