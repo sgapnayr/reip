@@ -217,6 +217,7 @@ a:hover {
 .FirstRow {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 100vh;
 }
 
 .FourByFour {
@@ -247,19 +248,14 @@ a:hover {
   grid-column: 1 / 3;
 }
 
-.SecondRow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .TwoByOne {
   width: 200%;
 }
 
-.ThirdRow {
+.SecondRow {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 40vh;
 }
 
 .DataDiv {
@@ -331,6 +327,13 @@ a:hover {
   justify-content: center;
   align-items: center;
   width: 50%;
+}
+
+.DateDiv {
+  background-color: var(--color4);
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+  margin: 1rem 0 -1rem 0;
 }
 
 /* Data */
@@ -419,10 +422,6 @@ a:hover {
   color: white;
   z-index: 1;
   transform: translateX(-33%);
-}
-
-.CPI:hover h1 {
-  color: red;
 }
 
 .InfoWrapper {
@@ -522,26 +521,25 @@ button:hover {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
   border-radius: 10px;
   padding: 1rem;
-  transition: .5s all ease-in-out;
   cursor: pointer;
 }
 
 .News:hover {
-  position: fixed;
-  height: 40vh;
+  position: absolute;
+  height: 50vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   align-self: center;
   overflow: scroll;
   width: 90%;
-  height: 90%;
+  height: 95%;
   box-shadow: 1px 1px 12px rgba(0, 0, 0, .7);
   border-radius: 10px;
   padding: 1rem;
   backdrop-filter: blur(18px);
   background: rgba(0, 0, 0, 0.5);
-  transform: translateY(-40%);
+  transform: translateY(-30vh);
 }
 
 .NewsInfo {

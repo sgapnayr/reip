@@ -47,13 +47,17 @@ function Tiles() {
                             </div>
                         </div>
                     </div>
-                    <div className="DataDiv LongRow">
+                    <div className="DataDiv2 LongRow">
                         <p>Market Trend</p>
                         <div className="Chart">
                             <BarChart />
                         </div>
-                        <div className="InfoTile">
-                            This is chart information.
+                        <div className="DateDiv">
+                            <Button value={'24h'} />
+                            <Button value={'7d'} />
+                            <Button value={'30d'} />
+                            <Button value={'1yr'} />
+                            <Button value={'5yr'} />
                         </div>
                     </div>
                     <div className="TwoByThree">
@@ -80,26 +84,17 @@ function Tiles() {
                                 <div className="InfoWrapper">
                                     <p>CPI</p>
                                     <h1>6.3%</h1>
-                                    <p className='PopUpInfo'>The Consumer Price Index (CPI) is a measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services.</p>
                                 </div>
+                            </div>
+                            <div className="PopUpDiv">
+                                <p className='PopUpInfo'>The Consumer Price Index (CPI) is a measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services.</p>
                             </div>
                         </div>
                         <div className="DataDiv">?</div>
                     </div>
                 </div>
 
-                <div className="DataContainer ThirdRow">
-                    <div className="DataDiv2 LongRow2">
-                        <div className="CheckList">
-                            <Button value={'Office'} />
-                            <Button value={'Industrial'} />
-                            <Button value={'Commercial'} />
-                            <Button value={'Multifamily'} />
-                            <Button value={'Selfstorage'} />
-                            <Button value={'Specialty'} />
-                            <Button value={'Health Care'} />
-                        </div>
-                    </div>
+                <div className="DataContainer SecondRow">
                     <div className="DataDiv">
                         #
                     </div>
