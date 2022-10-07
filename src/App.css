@@ -380,6 +380,17 @@ a:hover {
   border-radius: 10px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
   margin: 1rem 0 -1rem 0;
+  flex-direction: row;
+  display: flex;
+}
+
+.DateButton {
+  width: 2rem;
+  height: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: .65rem;
 }
 
 /* Data */
@@ -479,7 +490,7 @@ a:hover {
 
 button {
   padding: .5rem;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, .2);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
   margin: .5rem;

@@ -4,31 +4,35 @@ import ShowChart from '../DummyChart/Chart';
 import { useState } from 'react'
 import EconomicData from '../EconomicData/EconomicData';
 
-function Button({ value }) {
+function Tiles() {
     const [isActive, setIsActive] = useState(false)
-    const [dateValue, setDateValue] = useState('1')
+    const [dateValue, setDateValue] = useState(5)
     const handleActive = (e) => {
-        if (e.target.value === '24h') {
-            setDateValue(10)
-        } else if (e.target.value === '7d') {
+        setIsActive(!isActive)
+
+        const value = e.target.value
+
+        if (value === '24h') {
+            setDateValue(5)
+        } else if (value === '7d') {
             setDateValue(7)
-        } else if (e.target.value === '30d') {
+        } else if (value === '30d') {
             setDateValue(30)
-        } else if (e.target.value === '1yr') {
+        } else if (value === '1yr') {
             setDateValue(365)
-        } else if (e.target.value === '3yr') {
+        } else if (value === '3yr') {
             setDateValue(1000)
         }
-        setIsActive(!isActive)
     }
-    return (
-        <>
-            <button className={isActive ? 'Hover' : ''} onClick={handleActive} value={value}>{value}</button>
-        </>
-    )
-}
 
-function Tiles() {
+    const Button = ({ value }) => {
+        return (
+            <>
+                <button className={isActive ? 'Hover DateButton' : 'DateButton'} onClick={handleActive} value={value}>{value}</button>
+            </>
+        )
+    }
+
     return (
         <>
             <div className="DataContainers">
@@ -62,7 +66,7 @@ function Tiles() {
                     <div className="DataDiv2 LongRow">
                         <p>Market Trend</p>
                         <div className="Chart">
-                            <ShowChart value={15} />
+                            <ShowChart value={dateValue} />
                         </div>
                         <div className="DateDiv">
                             <Button value={'24h'} />
