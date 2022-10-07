@@ -7,9 +7,8 @@ import EconomicData from '../EconomicData/EconomicData';
 function Tiles() {
     const [isActive, setIsActive] = useState(false)
     const [dateValue, setDateValue] = useState(5)
-    const handleActive = (e) => {
-        setIsActive(!isActive)
 
+    const handleActive = (e) => {
         const value = e.target.value
 
         if (value === '24h') {
