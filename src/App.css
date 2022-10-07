@@ -93,9 +93,21 @@ a:hover {
 .RightSideNavBar {
   width: 33%;
   display: flex;
-  justify-content: start;
+  justify-content: end;
   align-items: center;
   height: 100%;
+  margin: 0 2rem 0 0;
+}
+
+.FontAwesomeIcon {
+  cursor: pointer;
+  transition: .2s all ease-in-out;
+  font-size: 1.5rem;
+}
+
+.FontAwesomeIcon:hover {
+  color: var(--color4);
+  transform: scale(1.2);
 }
 
 .Clock {

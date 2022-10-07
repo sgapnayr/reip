@@ -3,7 +3,7 @@ import { Chart as Chartjs } from 'chart.js/auto'
 import { Line } from 'react-chartjs-2'
 import axios from 'axios'
 
-export default function ShowChart({ value }) {
+export default function ShowChart({ value = 15 }) {
     const [apiData, setApiData] = useState([])
     const url = `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=${value}`
     console.log(url)

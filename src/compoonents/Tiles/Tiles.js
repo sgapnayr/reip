@@ -19,8 +19,6 @@ function Button({ value }) {
         } else if (e.target.value === '3yr') {
             setDateValue(1000)
         }
-
-        console.log(dateValue)
         setIsActive(!isActive)
     }
     return (

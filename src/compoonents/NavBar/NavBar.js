@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import logo from '../../Assets/images/reip.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 
 function NavBar() {
@@ -30,6 +32,9 @@ function NavBar() {
                         <a href="">News</a> */}
                     </div>
                     <div className="RightSideNavBar">
+                        <div className="FontAwesomeIcon">
+                            <FontAwesomeIcon icon={faBars} />
+                        </div>
                     </div>
                 </div>
             </div>
