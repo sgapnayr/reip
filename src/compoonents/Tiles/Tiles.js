@@ -19,8 +19,6 @@ function Tiles() {
             setDateValue(30)
         } else if (value === '1yr') {
             setDateValue(365)
-        } else if (value === '3yr') {
-            setDateValue(1000)
         }
     }
 
@@ -72,7 +70,6 @@ function Tiles() {
                             <Button value={'7d'} />
                             <Button value={'30d'} />
                             <Button value={'1yr'} />
-                            <Button value={'3yr'} />
                         </div>
                     </div>
                     <div className="TwoByThree">
