@@ -6,10 +6,10 @@ import Tiles from './compoonents/Tiles/Tiles';
 function App() {
   return (
     <div className="App">
+      HELLO
       <NavBar />
       <TickerCarousel />
       <Tiles />
-      <div className="div"></div>
     </div>
   );
 }
