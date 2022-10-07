@@ -17,12 +17,6 @@ function Button({ value }) {
 }
 
 function Tiles() {
-    const [visibility, setVisibility] = useState(false)
-
-    const handleClick = () => {
-        setVisibility(!visibility)
-    }
-
     return (
         <>
             <div className="DataContainers">
@@ -91,15 +85,6 @@ function Tiles() {
                             </div>
                         </div>
                         <div className="DataDiv">?</div>
-                    </div>
-                </div>
-
-                <div className="Button">
-                    <button className='buttonCenter' onClick={handleClick}>{visibility ? 'Show Less' : 'Show More'}</button>
-                </div>
-                <div className={visibility ? 'DataContainer SecondRow' : 'None'}>
-                    <div className='DataDiv'>
-                        More Information...
                     </div>
                 </div>
 
