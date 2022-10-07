@@ -5,16 +5,12 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 
 function NavBar() {
-    // function Clock() {
-    //     setInterval(() => {
-    //         const date = new Date();
-    //         setClock(date.toLocaleTimeString())
-    //     }, 1000)
-    // }
+    const [isActive, setIsActive] = useState(false)
 
-    // useEffect(() => {
-    //     Clock()
-    // }, [])
+    const handleHamburger = () => {
+        setIsActive(!isActive)
+        console.log(isActive)
+    }
 
     return (
         <>
@@ -24,7 +20,6 @@ function NavBar() {
                         <div className='DashBoardTitle'>
                             <img src={logo} alt="" />
                         </div>
-                        {/* <p className='DashBoardTitleSmall'>Realestate Dashboard</p> */}
                     </div>
                     <div className="CenterNavBar">
                         {/* <a href="">Home</a>
@@ -32,7 +27,7 @@ function NavBar() {
                         <a href="">News</a> */}
                     </div>
                     <div className="RightSideNavBar">
-                        <div className="FontAwesomeIcon">
+                        <div className={isActive ? "FontAwesomeIcon" : 'FontAwesomeIcon FontAwesomeIconActive'} onClick={handleHamburger}>
                             <FontAwesomeIcon icon={faBars} />
                         </div>
                     </div>

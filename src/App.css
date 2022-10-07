@@ -105,7 +105,11 @@ a:hover {
   font-size: 1.5rem;
 }
 
-.FontAwesomeIcon:hover {
+.FontAwesomeIconActive {
+  transform: rotateZ(90deg);
+}
+
+.FontAwesomeIcon:active {
   color: var(--color4);
   transform: scale(1.2);
 }
