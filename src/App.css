@@ -171,6 +171,7 @@ a:hover {
   font-style: italic;
   color: gray;
   background-color: var(--color4);
+  font-size: .75rem;
 }
 
 @keyframes slidein {
