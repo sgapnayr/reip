@@ -6,7 +6,21 @@ import EconomicData from '../EconomicData/EconomicData';
 
 function Button({ value }) {
     const [isActive, setIsActive] = useState(false)
+    const [dateValue, setDateValue] = useState('1')
     const handleActive = (e) => {
+        if (e.target.value === '24h') {
+            setDateValue(10)
+        } else if (e.target.value === '7d') {
+            setDateValue(7)
+        } else if (e.target.value === '30d') {
+            setDateValue(30)
+        } else if (e.target.value === '1yr') {
+            setDateValue(365)
+        } else if (e.target.value === '3yr') {
+            setDateValue(1000)
+        }
+
+        console.log(dateValue)
         setIsActive(!isActive)
     }
     return (
@@ -50,21 +64,21 @@ function Tiles() {
                     <div className="DataDiv2 LongRow">
                         <p>Market Trend</p>
                         <div className="Chart">
-                            <BarChart />
+                            <ShowChart value={15} />
                         </div>
                         <div className="DateDiv">
                             <Button value={'24h'} />
                             <Button value={'7d'} />
                             <Button value={'30d'} />
                             <Button value={'1yr'} />
-                            <Button value={'5yr'} />
+                            <Button value={'3yr'} />
                         </div>
                     </div>
                     <div className="TwoByThree">
                         <div className="TopOfTwoByThree">
                             <div className="DataDiv">
                                 <div className="Chart">
-                                    <ShowChart />
+                                    <BarChart />
                                 </div>
                             </div>
                         </div>
