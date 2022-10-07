@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import logo from '../../Assets/images/reip.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faPlus } from '@fortawesome/free-solid-svg-icons'
 
 
 function NavBar() {
@@ -22,16 +22,19 @@ function NavBar() {
                         </div>
                     </div>
                     <div className="CenterNavBar">
-                        {/* <a href="">Home</a>
-                        <a href="">Dash</a>
-                        <a href="">News</a> */}
                     </div>
                     <div className="RightSideNavBar">
-                        <div className={isActive ? "FontAwesomeIcon" : 'FontAwesomeIcon FontAwesomeIconActive'} onClick={handleHamburger}>
+                        <div className={isActive ? "FontAwesomeIcon FontAwesomeIconActive" : 'FontAwesomeIcon'} onClick={handleHamburger}>
                             <FontAwesomeIcon icon={faBars} />
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div className={isActive ? "HamburgerMenu HamburgerMenuActive" : 'HamburgerMenu'}>
+                <a href="">Home</a>
+                <a href="">Dash</a>
+                <a href="">News</a>
             </div>
         </>
     )

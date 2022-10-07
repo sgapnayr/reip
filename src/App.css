@@ -39,6 +39,35 @@
   flex-direction: row;
 }
 
+.HamburgerMenu {
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  height: 25vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, .7);
+  border-radius: 10px;
+  backdrop-filter: blur(18px);
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  z-index: 1;
+  top: 7vh;
+  right: 0%;
+  transform: translateX(100%);
+  transition: .2s all ease-in-out;
+}
+
+.HamburgerMenuActive {
+  transform: translateX(0%)
+}
+
 .Title {
   display: flex;
   justify-content: center;
