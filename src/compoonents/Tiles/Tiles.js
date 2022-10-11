@@ -159,7 +159,7 @@ function Tiles() {
                         </select>
                     </div>
                 </div>
-                <div className="DataContainer">
+                <div className="DataContainerNews">
                     <News />
                 </div>
             </div>
