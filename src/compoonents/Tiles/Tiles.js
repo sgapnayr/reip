@@ -11,14 +11,24 @@ function Tiles() {
     const handleActive = (e) => {
         const value = e.target.value
 
-        if (value === '24h') {
+        if (value === '1d') {
+            setDateValue(1)
+        } else if (value === '5d') {
             setDateValue(5)
-        } else if (value === '7d') {
-            setDateValue(7)
-        } else if (value === '30d') {
+        } else if (value === '1M') {
             setDateValue(30)
+        } else if (value === '3M') {
+            setDateValue(90)
+        } else if (value === '6M') {
+            setDateValue(180)
         } else if (value === '1yr') {
             setDateValue(365)
+        } else if (value === '2yr') {
+            setDateValue(730)
+        } else if (value === '5yr') {
+            setDateValue(1825)
+        } else if (value === 'Max') {
+            setDateValue(2525)
         }
     }
 
@@ -34,7 +44,7 @@ function Tiles() {
         <>
             <div className="DataContainers">
                 <div className="DataContainer FirstRow">
-                    <div className="FourByFour">
+                    <div className="TwoByTwo">
                         <div className="LeftTwo">
                             <div className="DataDiv">
                                 <div className="EconData">
@@ -66,10 +76,15 @@ function Tiles() {
                             <ShowChart value={dateValue} />
                         </div>
                         <div className="DateDiv">
-                            <Button value={'24h'} />
-                            <Button value={'7d'} />
-                            <Button value={'30d'} />
+                            <Button value={'1d'} />
+                            <Button value={'5d'} />
+                            <Button value={'1M'} />
+                            <Button value={'3M'} />
+                            <Button value={'6M'} />
                             <Button value={'1yr'} />
+                            <Button value={'2yr'} />
+                            <Button value={'5yr'} />
+                            <Button value={'Max'} />
                         </div>
                     </div>
                     <div className="TwoByThree">

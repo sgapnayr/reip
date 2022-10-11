@@ -62,7 +62,7 @@ export default function ShowChart({ value }) {
         },
         elements: {
             point: {
-                radius: 2,
+                radius: .1,
             },
         },
         scales: {
@@ -72,7 +72,7 @@ export default function ShowChart({ value }) {
                     drawTicks: false,
                 },
                 ticks: {
-                    display: false,
+                    display: true,
                 },
             },
             x: {
