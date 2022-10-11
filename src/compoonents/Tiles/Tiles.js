@@ -121,7 +121,7 @@ function Tiles() {
                     </div>
                 </div>
 
-                <div className="DataContainer SecondRow">
+                {/* <div className="DataContainer SecondRow">
                     <div className="DataDiv">
                         #
                     </div>
@@ -130,6 +130,33 @@ function Tiles() {
                     </div>
                     <div className="DataDiv">
                         #
+                    </div>
+                </div> */}
+
+                <div className="NewsHeading">
+                    <div className="NewsTitle">
+                        Category:
+                        <select name="" id="">
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                            <option value="">Option 3</option>
+                        </select>
+                    </div>
+                    <div className="NewsTitle">
+                        Category:
+                        <select name="" id="">
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                            <option value="">Option 3</option>
+                        </select>
+                    </div>
+                    <div className="NewsTitle">
+                        Category:
+                        <select name="" id="">
+                            <option value="">Option 1</option>
+                            <option value="">Option 2</option>
+                            <option value="">Option 3</option>
+                        </select>
                     </div>
                 </div>
                 <div className="DataContainer">

@@ -2,29 +2,43 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function News() {
-    const [news, setNews] = useState([])
+    const [news1, setNews1] = useState([])
+    const [news2, setNews2] = useState([])
 
     const newUrl = 'https://newsdata.io/api/1/news?apikey=pub_1122295a0600dd09ce2e7948214b07ef822fb&q=Real%20Estate '
 
-    async function GetNews() {
-        await axios.get(newUrl).then(res => setNews(res.data.results))
+    async function GetNews1() {
+        await axios.get(newUrl).then(res => setNews1(res.data.results))
     }
 
     useEffect(() => {
-        GetNews()
+        GetNews1()
     }, [])
 
     return (
         <>
-            <div className="NewsDiv">
-                <div className="News">
-                    {news.map(n => {
+            <div className="News">
+                <div className="NewsCol1">
+                    {news1.map(n => {
                         return (
                             <>
-                                <h2>{n.title}</h2>
-                                <p className='NewsInfo'>
-                                    {n.content}
-                                </p>
+                                <div className="NewsCard">
+                                    <img src={n?.image_url} className={n?.image_url ? 'NewsImage' : 'none'} alt="" />
+                                    <h2>{n?.title}</h2>
+                                    <p>{n?.content?.slice(0, 200) + ' [...]'}</p>
+                                </div>
+                            </>
+                        )
+                    })}
+                </div>
+                <div className="NewsCol2">
+                    {news1.map(n => {
+                        return (
+                            <>
+                                <div className="NewsCard">
+                                    <p>{n.title}</p>
+
+                                </div>
                             </>
                         )
                     })}
