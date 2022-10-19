@@ -25,7 +25,7 @@ function News() {
                                 <div className="NewsCard">
                                     <img src={n?.image_url} className={n?.image_url ? 'NewsImage' : 'none'} alt="" />
                                     <h2>{n?.title}</h2>
-                                    <p>{n?.content ? n?.content?.slice(0, 200) + ' [...]' : ''}</p>
+                                    <p>{n?.content?.slice(0, 200) + ' [...]'}</p>
                                 </div>
                             </>
                         )
@@ -37,7 +37,6 @@ function News() {
                             <>
                                 <div className="NewsCard">
                                     <p>{n.title}</p>
-
                                 </div>
                             </>
                         )

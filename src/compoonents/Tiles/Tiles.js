@@ -2,11 +2,18 @@ import BarChart from '../DummyChart/Bar';
 import News from '../News/News';
 import ShowChart from '../DummyChart/Chart';
 import { useState } from 'react'
-import EconomicData from '../EconomicData/EconomicData';
+import Slider from '../Toggle/Toggle';
 
 function Tiles() {
     const [isActive, setIsActive] = useState(false)
     const [dateValue, setDateValue] = useState(5)
+    const [newsCategory1, setNewsCategory1] = useState('')
+
+    const handleNewsCategory1 = (e) => {
+        const { value } = e.target
+        setNewsCategory1(value.toLowerCase())
+        console.log(value)
+    }
 
     const handleActive = (e) => {
         const value = e.target.value
@@ -45,6 +52,9 @@ function Tiles() {
             <div className="DataContainers">
                 <div className="DataContainer FirstRow">
                     <div className="TwoByTwo">
+                        <div className="Slider">
+                            <Slider />
+                        </div>
                         <div className="LeftTwo">
                             <div className="DataDiv">
                                 <div className="EconData">
@@ -136,8 +146,8 @@ function Tiles() {
                 <div className="NewsHeading">
                     <div className="NewsTitle">
                         Category:
-                        <select name="" id="">
-                            <option value="">Option 1</option>
+                        <select name="" id="" onChange={handleNewsCategory1}>
+                            <option value="technology">Technology</option>
                             <option value="">Option 2</option>
                             <option value="">Option 3</option>
                         </select>
