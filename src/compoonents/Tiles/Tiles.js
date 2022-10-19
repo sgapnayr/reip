@@ -57,8 +57,11 @@ function Tiles() {
             <div className="DataContainers">
                 <div className="DataContainer FirstRow">
                     <div className="TwoByTwo">
-                        <div className="Slider">
-                            <Slider handleSlider={handleSlider} />
+                        <div className="DataDiv2">
+                            <div className="Slider">
+                                <div className="SliderTitle">Category</div>
+                                <Slider handleSlider={handleSlider} />
+                            </div>
                         </div>
                         <div className="LeftTwo">
                             <div className="DataDiv">
@@ -84,8 +87,11 @@ function Tiles() {
                                 </div>
                             </div>
                         </div>
-                        <div className="Slider">
-                            <Slider handleSlider={handleSlider} />
+                        <div className="DataDiv2">
+                            <div className="Slider">
+                                <div className="SliderTitle">Category</div>
+                                <Slider handleSlider={handleSlider} />
+                            </div>
                         </div>
                         <div className="OnebyTwo">
                             <div className="DataDiv">
@@ -118,6 +124,12 @@ function Tiles() {
                         </div>
                     </div>
                     <div className="TwoByThree">
+                        <div className="DataDiv2">
+                            <div className="Slider">
+                                <div className="SliderTitle">Category</div>
+                                <Slider handleSlider={handleSlider} />
+                            </div>
+                        </div>
                         <div className="TopOfTwoByThree">
                             <div className="DataDiv">
                                 <div className="Chart">
