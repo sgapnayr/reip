@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const ToggleOuterContainer = styled.div`
@@ -6,6 +6,7 @@ const ToggleOuterContainer = styled.div`
   width: ${props => props.outerWidth}px;
   height: 30px;
   border-radius: 50px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
   background-color: ${props => props.toggled === 'yes' ? '#30D158' : 'grey'};
   overflow: hidden;
   cursor: pointer;
@@ -24,7 +25,7 @@ const ToggleInnerContainer = styled.div`
   cursor: pointer;
 `;
 
-function Slider({ handleSlider }) {
+function Slider({ }) {
     const [toggled, setToggle] = useState('no');
 
     const handleToggle = () => {
@@ -32,6 +33,7 @@ function Slider({ handleSlider }) {
     };
 
     const outerWidth = 55;
+
 
     return (
         <ToggleOuterContainer toggled={toggled} outerWidth={outerWidth} onClick={handleToggle}>

@@ -8,16 +8,31 @@ function Tiles() {
     const [isActive, setIsActive] = useState(false)
     const [dateValue, setDateValue] = useState(5)
     const [newsCategory1, setNewsCategory1] = useState('')
-    const [sliderActive, setSliderActive] = useState(false)
+    const [sliderActive1, setSliderActive1] = useState(true)
+    const [sliderActive2, setSliderActive2] = useState(true)
+    const [sliderActive3, setSliderActive3] = useState(true)
+    const [toggled, setToggle] = useState('no');
+
+    const handleToggle = () => {
+        toggled === 'no' ? setToggle('yes') : setToggle('no');
+    };
+
 
     const handleNewsCategory1 = (e) => {
         const { value } = e.target
         setNewsCategory1(value.toLowerCase())
-        console.log(value)
     }
 
-    const handleSlider = () => {
-        setSliderActive(!sliderActive)
+    const handleSlider1 = () => {
+        setSliderActive1(!sliderActive1)
+    }
+
+    const handleSlider2 = () => {
+        setSliderActive2(!sliderActive2)
+    }
+
+    const handleSlider3 = () => {
+        setSliderActive3(!sliderActive3)
     }
 
     const handleActive = (e) => {
@@ -56,26 +71,14 @@ function Tiles() {
         <>
             <div className="DataContainers">
                 <div className="DataContainer FirstRow">
-                    <div className="TwoByTwo">
-                        <div className="DataDiv2">
-                            <div className="Slider">
+                    <div className='TwoByTwo'>
+                        <div className={sliderActive1 ? 'DataDiv2 Deactive' : 'DataDiv2'}>
+                            <div className='Slider' onClick={handleSlider1}>
                                 <div className="SliderTitle">Category</div>
-                                <Slider handleSlider={handleSlider} />
+                                <Slider />
                             </div>
                         </div>
-                        <div className="LeftTwo">
-                            <div className="DataDiv">
-                                <div className="EconData">
-                                    Econ Data
-                                </div>
-                            </div>
-                            <div className="DataDiv">
-                                <div className="EconData">
-                                    Econ Data
-                                </div>
-                            </div>
-                        </div>
-                        <div className="RightTwo">
+                        <div className={sliderActive1 ? 'LeftTwo Deactive' : 'LeftTwo'}>
                             <div className="DataDiv">
                                 <div className="EconData">
                                     Econ Data
@@ -87,13 +90,25 @@ function Tiles() {
                                 </div>
                             </div>
                         </div>
-                        <div className="DataDiv2">
-                            <div className="Slider">
+                        <div className={sliderActive1 ? 'RightTwo Deactive' : 'RightTwo'} s>
+                            <div className="DataDiv">
+                                <div className="EconData">
+                                    Econ Data
+                                </div>
+                            </div>
+                            <div className="DataDiv">
+                                <div className="EconData">
+                                    Econ Data
+                                </div>
+                            </div>
+                        </div>
+                        <div className={sliderActive2 ? 'DataDiv2 Deactive' : 'DataDiv2'}>
+                            <div className='Slider' onClick={handleSlider2}>
                                 <div className="SliderTitle">Category</div>
-                                <Slider handleSlider={handleSlider} />
+                                <Slider />
                             </div>
                         </div>
-                        <div className="OnebyTwo">
+                        <div className={sliderActive2 ? 'OnebyTwo Deactive' : 'OnebyTwo'}>
                             <div className="DataDiv">
                                 <div className="EconData">
                                     Econ Data
@@ -124,13 +139,13 @@ function Tiles() {
                         </div>
                     </div>
                     <div className="TwoByThree">
-                        <div className="DataDiv2">
-                            <div className="Slider">
+                        <div className={sliderActive3 ? 'DataDiv2 Deactive' : 'DataDiv2'}>
+                            <div className="Slider" onClick={handleSlider3}>
                                 <div className="SliderTitle">Category</div>
-                                <Slider handleSlider={handleSlider} />
+                                <Slider />
                             </div>
                         </div>
-                        <div className="TopOfTwoByThree">
+                        <div className={sliderActive3 ? 'TopOfTwoByThree Deactive' : 'TopOfTwoByThree'}>
                             <div className="DataDiv">
                                 <div className="Chart">
                                     <BarChart />
@@ -138,7 +153,7 @@ function Tiles() {
                             </div>
                         </div>
 
-                        <div className="DataDiv">
+                        <div className={sliderActive3 ? 'DataDiv Deactive' : 'DataDiv'}>
                             <div className="Rates">
                                 <div className="InfoWrapper">
                                     <p>Rates</p>
@@ -147,8 +162,8 @@ function Tiles() {
                                 </div>
                             </div>
                         </div>
-                        <div className="DataDiv">?</div>
-                        <div className="DataDiv">
+                        <div className={sliderActive3 ? 'DataDiv Deactive' : 'DataDiv'}>?</div>
+                        <div className={sliderActive3 ? 'DataDiv Deactive' : 'DataDiv'}>
                             <div className="CPI">
                                 <div className="InfoWrapper">
                                     <p>CPI</p>
@@ -157,7 +172,7 @@ function Tiles() {
                                 </div>
                             </div>
                         </div>
-                        <div className="DataDiv">?</div>
+                        <div className={sliderActive3 ? 'DataDiv Deactive' : 'DataDiv'}>?</div>
                     </div>
                 </div>
                 <div className="NewsHeading">
