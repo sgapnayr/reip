@@ -17,7 +17,7 @@ function News() {
 
     return (
         <>
-            <div className="News">
+            {news1 && <div className="News">
                 <div className="NewsCol1">
                     {news1.map(n => {
                         return (
@@ -56,7 +56,7 @@ function News() {
                         )
                     })}
                 </div>
-            </div>
+            </div>}
         </>
     )
 }
