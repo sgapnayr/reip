@@ -11,12 +11,6 @@ function Tiles() {
     const [sliderActive1, setSliderActive1] = useState(true)
     const [sliderActive2, setSliderActive2] = useState(true)
     const [sliderActive3, setSliderActive3] = useState(true)
-    const [toggled, setToggle] = useState('no');
-
-    const handleToggle = () => {
-        toggled === 'no' ? setToggle('yes') : setToggle('no');
-    };
-
 
     const handleNewsCategory1 = (e) => {
         const { value } = e.target
@@ -75,7 +69,7 @@ function Tiles() {
                         <div className={sliderActive1 ? 'DataDiv2 Deactive' : 'DataDiv2'}>
                             <div className='Slider' onClick={handleSlider1}>
                                 <div className="SliderTitle">Category</div>
-                                <Slider />
+                                <Slider toggled='yes' />
                             </div>
                         </div>
                         <div className={sliderActive1 ? 'LeftTwo Deactive' : 'LeftTwo'}>
