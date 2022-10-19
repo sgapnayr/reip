@@ -8,11 +8,16 @@ function Tiles() {
     const [isActive, setIsActive] = useState(false)
     const [dateValue, setDateValue] = useState(5)
     const [newsCategory1, setNewsCategory1] = useState('')
+    const [sliderActive, setSliderActive] = useState(false)
 
     const handleNewsCategory1 = (e) => {
         const { value } = e.target
         setNewsCategory1(value.toLowerCase())
         console.log(value)
+    }
+
+    const handleSlider = () => {
+        setSliderActive(!sliderActive)
     }
 
     const handleActive = (e) => {
@@ -53,7 +58,7 @@ function Tiles() {
                 <div className="DataContainer FirstRow">
                     <div className="TwoByTwo">
                         <div className="Slider">
-                            <Slider />
+                            <Slider handleSlider={handleSlider} />
                         </div>
                         <div className="LeftTwo">
                             <div className="DataDiv">
@@ -68,6 +73,21 @@ function Tiles() {
                             </div>
                         </div>
                         <div className="RightTwo">
+                            <div className="DataDiv">
+                                <div className="EconData">
+                                    Econ Data
+                                </div>
+                            </div>
+                            <div className="DataDiv">
+                                <div className="EconData">
+                                    Econ Data
+                                </div>
+                            </div>
+                        </div>
+                        <div className="Slider">
+                            <Slider handleSlider={handleSlider} />
+                        </div>
+                        <div className="OnebyTwo">
                             <div className="DataDiv">
                                 <div className="EconData">
                                     Econ Data
@@ -121,28 +141,13 @@ function Tiles() {
                                 <div className="InfoWrapper">
                                     <p>CPI</p>
                                     <h1>6.3%</h1>
+                                    <p className='PopUpInfo'>The Consumer Price Index (CPI) is a measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services.</p>
                                 </div>
-                            </div>
-                            <div className="PopUpDiv">
-                                <p className='PopUpInfo'>The Consumer Price Index (CPI) is a measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services.</p>
                             </div>
                         </div>
                         <div className="DataDiv">?</div>
                     </div>
                 </div>
-
-                {/* <div className="DataContainer SecondRow">
-                    <div className="DataDiv">
-                        #
-                    </div>
-                    <div className="DataDiv">
-                        #
-                    </div>
-                    <div className="DataDiv">
-                        #
-                    </div>
-                </div> */}
-
                 <div className="NewsHeading">
                     <div className="NewsTitle">
                         Category:
