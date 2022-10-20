@@ -61,13 +61,13 @@ function Tiles() {
 
     const handleChangeData = (e) => {
         const value = e.target.value
-        if (value === 'Econ 1' && sliderActive1 === false) {
+        if (value === 'Inflation Rate' && sliderActive1 === false) {
             setCoin('bitcoin')
-        } else if (value === 'Econ 3' && sliderActive1 === false) {
+        } else if (value === 'Unemployment' && sliderActive1 === false) {
             setCoin('ethereum')
-        } else if (value === 'Econ 2' && sliderActive1 === false) {
+        } else if (value === 'Prime Rate' && sliderActive1 === false) {
             setCoin('chainlink')
-        } else if (value === 'Econ 4' && sliderActive1 === false) {
+        } else if (value === 'Consumer Spending' && sliderActive1 === false) {
             setCoin('helium')
         } else if (value === 'Econ 5' && sliderActive2 === false) {
             setCoin('tether')
@@ -100,29 +100,29 @@ function Tiles() {
                     <div className='TwoByTwo'>
                         <div className={sliderActive1 ? 'DataDiv2 Deactive' : 'DataDiv2'}>
                             <div className='Slider' onClick={handleSlider1}>
-                                <div className="SliderTitle">Category</div>
+                                <div className="SliderTitle">Rates</div>
                                 <Slider sliderActive1={sliderActive1} sliderActive2={sliderActive2} sliderActive3={sliderActive3} />
                             </div>
                         </div>
                         <div className={sliderActive1 ? 'LeftTwo Deactive' : 'LeftTwo'}>
                             <div className={sliderActive1 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <EconButton value={'Econ 1'} />
+                                <EconButton value={'Inflation Rate'} />
                             </div>
                             <div className={sliderActive1 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <EconButton value={'Econ 3'} />
+                                <EconButton value={'Unemployment'} />
                             </div>
                         </div>
                         <div className={sliderActive1 ? 'RightTwo Deactive' : 'RightTwo'} s>
                             <div className={sliderActive1 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <EconButton value={'Econ 2'} />
+                                <EconButton value={'Prime Rate'} />
                             </div>
                             <div className={sliderActive1 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <EconButton value={'Econ 4'} />
+                                <EconButton value={'Consumer Spending'} />
                             </div>
                         </div>
                         <div className={sliderActive2 ? 'DataDiv2 Deactive' : 'DataDiv2'}>
                             <div className='Slider' onClick={handleSlider2}>
-                                <div className="SliderTitle">Category</div>
+                                <div className="SliderTitle">Percentages</div>
                                 <Slider />
                             </div>
                         </div>
@@ -155,18 +155,10 @@ function Tiles() {
                     <div className="TwoByThree">
                         <div className={sliderActive3 ? 'DataDiv2 Deactive' : 'DataDiv2'}>
                             <div className="Slider" onClick={handleSlider3}>
-                                <div className="SliderTitle">Category</div>
+                                <div className="SliderTitle">Demographics</div>
                                 <Slider />
                             </div>
                         </div>
-                        <div className={sliderActive3 ? 'TopOfTwoByThree Deactive' : 'TopOfTwoByThree'}>
-                            <div className={sliderActive3 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <div className="Chart">
-                                    Demographics
-                                </div>
-                            </div>
-                        </div>
-
                         <div className={sliderActive3 ? 'DataDiv Deactive' : 'DataDiv'}>
                             <div className="Rates">
                                 <div className="InfoWrapper">

@@ -501,9 +501,10 @@ a:hover {
   flex-direction: column;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
   font-size: small;
+  transition: .2s all ease-in-out;
 }
 
-.Rates:hover {
+/* .Rates:hover {
   position: absolute;
   display: flex;
   align-items: center;
@@ -519,7 +520,7 @@ a:hover {
   right: 0%;
   width: 50%;
   height: 75%;
-}
+} */
 
 .Rates:hover h1 {
   color: #30D158;
