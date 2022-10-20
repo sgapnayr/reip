@@ -26,19 +26,19 @@ const ToggleInnerContainer = styled.div`
 `;
 
 function Slider() {
-    const [toggled, setToggle] = useState(true);
+  const [toggled, setToggle] = useState(true);
 
-    const handleToggle = () => {
-        setToggle(!toggled);
-    };
+  const handleToggle = () => {
+    setToggle(!toggled);
+  };
 
-    const outerWidth = 55;
+  const outerWidth = 55;
 
-    return (
-        <ToggleOuterContainer toggled={toggled} outerWidth={outerWidth} onClick={handleToggle}>
-            <ToggleInnerContainer outerWidth={outerWidth} size={30} toggled={toggled} />
-        </ToggleOuterContainer>
-    );
+  return (
+    <ToggleOuterContainer toggled={toggled} outerWidth={outerWidth} onClick={handleToggle}>
+      <ToggleInnerContainer outerWidth={outerWidth} size={30} toggled={toggled} />
+    </ToggleOuterContainer>
+  );
 }
 
 export default Slider;

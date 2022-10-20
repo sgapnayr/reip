@@ -478,11 +478,14 @@ a:hover {
 
 .EconButton {
   border-radius: 10px;
+  transition: .2s all ease-in-out;
 }
 
 .EconButtonActive:active {
-  color: var(--color4);
-  transform: scale(.2);
+  color: var(--color2);
+  transform: scale(.75);
+  background-color: var(--color5);
+  box-shadow: 0px 5px var(--color3);
 }
 
 .Rates {
