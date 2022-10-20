@@ -11,6 +11,7 @@ function Tiles() {
     const [sliderActive1, setSliderActive1] = useState(true)
     const [sliderActive2, setSliderActive2] = useState(true)
     const [sliderActive3, setSliderActive3] = useState(true)
+    const [coin, setCoin] = useState('bitcoin')
 
     const handleNewsCategory1 = (e) => {
         const { value } = e.target
@@ -37,7 +38,6 @@ function Tiles() {
 
     const handleActive = (e) => {
         const value = e.target.value
-
         if (value === '1d') {
             setDateValue(1)
         } else if (value === '5d') {
@@ -59,10 +59,32 @@ function Tiles() {
         }
     }
 
+    const handleChangeData = (e) => {
+        const value = e.target.value
+        if (value === 'bitcoin' && sliderActive1 === false) {
+            setCoin('bitcoin')
+        } else if (value === 'ethereum' && sliderActive1 === false) {
+            setCoin('ethereum')
+        } else if (value === 'chainlink' && sliderActive1 === false) {
+            setCoin('chainlink')
+        } else if (value === 'helium' && sliderActive1 === false) {
+            setCoin('helium')
+        }
+        console.log(coin)
+    }
+
     const Button = ({ value }) => {
         return (
             <>
                 <button className={isActive ? 'Hover DateButton' : 'DateButton'} onClick={handleActive} value={value}>{value}</button>
+            </>
+        )
+    }
+
+    const EconButton = ({ value }) => {
+        return (
+            <>
+                <button className={isActive ? 'EconButtonActive EconButton' : 'EconButton'} onClick={handleChangeData} value={value}>{value}</button>
             </>
         )
     }
@@ -80,26 +102,18 @@ function Tiles() {
                         </div>
                         <div className={sliderActive1 ? 'LeftTwo Deactive' : 'LeftTwo'}>
                             <div className={sliderActive1 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <div className="EconData">
-                                    Econ Data
-                                </div>
+                                <EconButton value={'bitcoin'} />
                             </div>
                             <div className={sliderActive1 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <div className="EconData">
-                                    Econ Data
-                                </div>
+                                <EconButton value={'ethereum'} />
                             </div>
                         </div>
                         <div className={sliderActive1 ? 'RightTwo Deactive' : 'RightTwo'} s>
                             <div className={sliderActive1 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <div className="EconData">
-                                    Econ Data
-                                </div>
+                                <EconButton value={'chainlink'} />
                             </div>
                             <div className={sliderActive1 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <div className="EconData">
-                                    Econ Data
-                                </div>
+                                <EconButton value={'helium'} />
                             </div>
                         </div>
                         <div className={sliderActive2 ? 'DataDiv2 Deactive' : 'DataDiv2'}>
@@ -124,7 +138,7 @@ function Tiles() {
                     <div className="DataDiv2 LongRow">
                         <p>Market Trend</p>
                         <div className="Chart">
-                            <ShowChart value={dateValue} />
+                            <ShowChart value={dateValue} coin={coin} />
                         </div>
                         <div className="DateDiv">
                             <Button value={'1d'} />

@@ -476,6 +476,15 @@ a:hover {
   text-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
 }
 
+.EconButton {
+  border-radius: 10px;
+}
+
+.EconButtonActive:active {
+  color: var(--color4);
+  transform: scale(.2);
+}
+
 .Rates {
   background: rgb(255, 255, 255);
   background: linear-gradient(138deg, rgb(141, 141, 141) 0%, #30D158 100%);
