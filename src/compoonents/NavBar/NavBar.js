@@ -9,7 +9,6 @@ function NavBar() {
 
     const handleHamburger = () => {
         setIsActive(!isActive)
-        console.log(isActive)
     }
 
     return (

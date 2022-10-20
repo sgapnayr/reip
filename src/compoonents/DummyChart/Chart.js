@@ -72,7 +72,7 @@ export default function ShowChart({ value }) {
                     drawTicks: false,
                 },
                 ticks: {
-                    display: true,
+                    display: false,
                 },
             },
             x: {
