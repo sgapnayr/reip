@@ -300,6 +300,7 @@ a:hover {
   margin: 1rem;
   background: none;
   font-weight: bold;
+  font-size: small;
 }
 
 .LeftTwo {
@@ -377,6 +378,7 @@ a:hover {
 .Deactive {
   opacity: 0.25;
   cursor: alias;
+  transition: .2s all ease-in-out
 }
 
 .DataDiv2 {
@@ -397,6 +399,11 @@ a:hover {
 .DataDiv:hover {
   background-color: var(--color2);
   color: black;
+}
+
+.DeactiveCold:hover {
+  background-color: var(--color1);
+  color: var(--color2);
 }
 
 .InfoTile {

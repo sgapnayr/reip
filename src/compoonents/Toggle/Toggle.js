@@ -7,7 +7,7 @@ const ToggleOuterContainer = styled.div`
   height: 30px;
   border-radius: 50px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-  background-color: ${props => props.toggled === 'yes' ? '#30D158' : 'grey'};
+  background-color: ${props => props.toggled === false ? '#30D158' : 'grey'};
   overflow: hidden;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -20,20 +20,19 @@ const ToggleInnerContainer = styled.div`
   background-color: white;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
   position: absolute;
-  left: ${props => props.toggled === 'no' ? "0" : `${props.outerWidth - props.size}px`};
+  left: ${props => props.toggled === true ? "0" : `${props.outerWidth - props.size}px`};
   transition: all 0.3s ease;
   cursor: pointer;
 `;
 
-function Slider({ }) {
-    const [toggled, setToggle] = useState('no');
+function Slider() {
+    const [toggled, setToggle] = useState(true);
 
     const handleToggle = () => {
-        toggled === 'no' ? setToggle('yes') : setToggle('no');
+        setToggle(!toggled);
     };
 
     const outerWidth = 55;
-
 
     return (
         <ToggleOuterContainer toggled={toggled} outerWidth={outerWidth} onClick={handleToggle}>
@@ -42,12 +41,4 @@ function Slider({ }) {
     );
 }
 
-function SliderComponent() {
-    return (
-        <>
-            <Slider />
-        </>
-    );
-}
-
-export default SliderComponent;
+export default Slider;
