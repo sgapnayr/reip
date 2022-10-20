@@ -558,7 +558,7 @@ a:hover {
   font-size: small;
 }
 
-.CPI:hover {
+/* .CPI:hover {
   position: absolute;
   display: flex;
   align-items: center;
@@ -574,7 +574,7 @@ a:hover {
   right: 0%;
   width: 50%;
   height: 75%;
-}
+} */
 
 .InfoWrapper {
   margin: 1rem;
