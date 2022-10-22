@@ -69,9 +69,9 @@ function Tiles() {
             setCoin('chainlink')
         } else if (value === 'Consumer Spending' && sliderActive1 === false) {
             setCoin('helium')
-        } else if (value === 'Econ 5' && sliderActive2 === false) {
+        } else if (value === 'CPI' && sliderActive2 === false) {
             setCoin('tether')
-        } else if (value === 'Econ 6' && sliderActive2 === false) {
+        } else if (value === 'Rates' && sliderActive2 === false) {
             setCoin('cardano')
         }
         console.log(coin)
@@ -89,6 +89,19 @@ function Tiles() {
         return (
             <>
                 <button className={isActive ? 'EconButton' : 'EconButtonActive EconButton'} onClick={handleChangeData} value={value}>{value}</button>
+            </>
+        )
+    }
+
+    const CPIButton = ({ value, className }) => {
+        return (
+            <>
+                <button className={isActive ? 'CPI' : `EconButtonActive ${className}`} onClick={handleChangeData} value={value}>
+                    <div className="InfoWrapper">
+                        <p>{value}</p>
+                        <h1>6.3%</h1>
+                    </div>
+                </button>
             </>
         )
     }
@@ -128,10 +141,10 @@ function Tiles() {
                         </div>
                         <div className={sliderActive2 ? 'OnebyTwo Deactive' : 'OnebyTwo'}>
                             <div className={sliderActive2 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <EconButton value={'Econ 5'} />
+                                <CPIButton value={'CPI'} className={'CPI'} />
                             </div>
                             <div className={sliderActive2 ? 'DataDiv DeactiveCold' : 'DataDiv'}>
-                                <EconButton value={'Econ 6'} />
+                                <CPIButton value={'Rates'} className={'Rates'} />
                             </div>
                         </div>
                     </div>
@@ -160,21 +173,11 @@ function Tiles() {
                             </div>
                         </div>
                         <div className={sliderActive3 ? 'DataDiv Deactive' : 'DataDiv'}>
-                            <div className="Rates">
-                                <div className="InfoWrapper">
-                                    <p>Rates</p>
-                                    <h1>7.1%</h1>
-                                </div>
-                            </div>
+                            ?
                         </div>
                         <div className={sliderActive3 ? 'DataDiv Deactive' : 'DataDiv'}>?</div>
                         <div className={sliderActive3 ? 'DataDiv Deactive' : 'DataDiv'}>
-                            <div className="CPI">
-                                <div className="InfoWrapper">
-                                    <p>CPI</p>
-                                    <h1>6.3%</h1>
-                                </div>
-                            </div>
+                            ?
                         </div>
                         <div className={sliderActive3 ? 'DataDiv Deactive' : 'DataDiv'}>?</div>
                     </div>
